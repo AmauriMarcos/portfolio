@@ -1,0 +1,42 @@
+@import '../styles/variables';
+
+
+.container{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    font-family: "Gotham";
+}
+
+.top, .right,
+.bottom, .left{
+    color: $primary-color;
+    text-transform: uppercase;
+    position: absolute;
+    font-family: $bold-font;
+    letter-spacing: 1.3px;
+}
+
+.top{
+    left: 50%;
+    transform: translate(-50%, 1rem);
+}
+
+.right{
+    top: 321.8px;
+    right: 0;
+    transform: translate(-2rem, 8rem) rotate(90deg);
+    transform-origin: bottom right;
+}
+
+.bottom{
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -1rem) rotate(180deg);
+}
+
+.left{
+    top: 321.8px;
+    transform: translate(2rem, 8rem) rotate(270deg);
+    transform-origin: bottom left;  
+}
