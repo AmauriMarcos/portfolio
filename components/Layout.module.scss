@@ -3,9 +3,35 @@
 
 .container{
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     position: relative;
     font-family: "Gotham";
+}
+
+.circleTopLeft, .circleTopRight,
+.circleBottomLeft, .circleBottomRight{
+    position: absolute;
+}
+
+.circleTopLeft{
+    transform: translate(1rem, 1rem); 
+}
+
+.circleTopRight{
+    right: .5rem;
+    top: 1rem;
+    transform: rotate(90deg);
+}
+
+.circleBottomLeft{
+    bottom: 0;
+    transform: rotate(-80deg) translate(1.3rem, .5rem);
+}
+
+.circleBottomRight{
+    bottom: 0;
+    right: 0;
+    transform: rotate(-180deg) translate(.5rem, 1rem);
 }
 
 .top, .right,
@@ -14,7 +40,7 @@
     text-transform: uppercase;
     position: absolute;
     font-family: $bold-font;
-    letter-spacing: 1.3px;
+    letter-spacing: .2rem;
 }
 
 .top{

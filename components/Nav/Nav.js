@@ -1,13 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './Nav.module.scss';
+import Hamburger from 'hamburger-react';
 
 function Nav() {
+    const [isOpen, setOpen] = useState(false);
+
+    const handleActive = () =>{
+        setOpen(!isOpen);
+    }
+
     return (
-        <div className={styles.nav}>
-            <div className={styles.logo}>
-                <h2>AS.</h2>
-            </div>
-            <ul className={styles.list}>
+        <>
+        <div className={isOpen ? styles.menuOpen : styles.slideMenu}>
+            <ul>
                 <li>
                     <a href="#">Home</a>
                 </li>
@@ -22,6 +27,17 @@ function Nav() {
                 </li>
             </ul>
         </div>
+
+        <div className={styles.nav}>
+            <div className={styles.logo}>
+                <h2>A</h2>
+            </div>
+            <div className={styles.navElements}>
+                <a href="#">Get in touch</a>
+                <Hamburger color="#4FD1C5"  size={48} toggled={isOpen} toggle={setOpen} />
+            </div>
+        </div>
+        </>
     )
 }
 

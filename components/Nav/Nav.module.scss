@@ -1,32 +1,115 @@
 @import "../../styles/mixins.scss";
 @import "../../styles/variables";
 
-.nav{
-    @include centered(initial, space-between);
-    margin: 1rem 4rem;
-    position: relative;
-}
 
-.nav .list{
-    @include centered(initial, center);
-    z-index: 50;
-}
+.slideMenu{
+    width: 93.75%;
+    transform: translate(3rem, -60rem);
+    height: 100vh;
+    position: absolute;
+    background-color: $dark-color;
+    transition: all .5s ease-in-out;
+    z-index: 500;
 
-.logo{
-    font-weight: 900;
-    font-size: 2rem;
-    color: $primary-color;
-}
+    & ul{
+        @include centered(column, center);
+        height: 100%;
+        width: 100%;
+        color: black;
+        font-size: 5rem;
+        z-index: 500;
+        font-family: $bold-font;
 
-.list{
+        a{
+            color: $light-color;
+            text-transform: uppercase;
+            letter-spacing: .1rem;
 
-    & li{
-        margin-left: 1.5rem;
-        & a{
-            color: #fff;
             &:hover{
-                color: $secondary-color;
+                color: $primary-color;
+            }
+        }
+    }
+ 
+}
+
+.menuOpen {
+    transform: translate(3rem, 0);
+    /* opacity: 1; */
+    width: 93.75%;
+    height: 100vh;
+    position: absolute;
+/*     animation-duration: 500ms;
+    animation-name: slidein; */
+    background-color: $dark-color;
+    transition: all .3s ease-in-out;
+    z-index: 500;
+
+    & ul{
+        @include centered(column, center);
+        height: 100%;
+        width: 100%;
+        color: black;
+        font-size: 5rem;
+        z-index: 500;
+        font-family: $bold-font;
+
+        a{
+            color: $light-color;
+            text-transform: uppercase;
+            letter-spacing: .1rem;
+
+            &:hover{
+                color: $primary-color;
             }
         }
     }
 }
+
+
+/* @keyframes slidein {
+    from {
+        transform: translate(3rem, -50rem);
+        height: 0;
+    }
+  
+    to {
+        transform: translate(3rem, 0rem);
+        height: 100vh;
+    }
+} */
+
+
+.nav{
+    @include centered(center, space-between);
+    width: 93.75%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    transform: translateY(4.5rem);
+    z-index: 600;
+    position: relative;
+
+    .logo{
+        font-weight: 900;
+        font-size: 1.7rem;
+        color: $light-color;
+        background-color: $dark-color;
+        padding: .3rem 1.5rem;
+        font-family: $bold-font;
+    }
+    
+    .navElements{
+        @include centered(center, space-between);
+        width: 200px;
+
+        a{
+            color: $light-color;
+            font-family: $bold-font;
+            text-transform: uppercase;
+            letter-spacing: .1rem;
+            font-size: 1.3rem;
+        }
+    }
+}
+
+

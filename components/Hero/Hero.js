@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Hero.module.scss';
 import Image from 'next/image';
-import fingerPrintImg from '../../public/assets/fingerPrintImage.png'
+import fingerPrintImg from '../../public/assets/fingerPrintImage.png';
 
 const Hero = () => {
     return (
