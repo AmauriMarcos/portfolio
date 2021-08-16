@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 import styles from "./Form.module.scss";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
+import { send } from 'emailjs-com';
 
 const SignupSchema = Yup.object().shape({
   fullName: Yup.string()
@@ -16,10 +17,8 @@ const SignupSchema = Yup.object().shape({
   message: Yup.string().min(2, "Too Short").required("Required"),
 });
 
-console.log(process.env.TOKEN);
-console.log("Token acima");
-
 const ContactForm = () => {
+  const [infoMessage, setInfoMessage] = useState("");
   return (
     <div className={styles.Form}>
       <Formik
@@ -30,16 +29,39 @@ const ContactForm = () => {
           message: "",
         }}
         validationSchema={SignupSchema}
-        onSubmit={(values) => {
+        onSubmit={(values, {resetForm}) => {
           // same shape as initial values
           console.log(values);
+          setInfoMessage("");
+          send(
+            'service_5rf2vlo',
+            'template_c3iyy41',
+            values,
+            'user_JL9i8mZlbV5ymPj0oB52b'
+          ).then((response) => {
+              console.log('SUCCESS!');
+              console.log(response);
+              resetForm({})
+              setInfoMessage("Thank you for your contact !!! I will respond your message as soon as possible.")
+            })
+            .catch((err) => {
+              console.log('FAILED...', err);
+            });
+
+            setInfoMessage("");
+        
         }}
       >
         {({ errors, touched }) => (
           <Form className={styles.formkikForm}>
             <div className={styles.boxInput}>
               <label htmlFor="fullName">Full name</label>
-              <Field name="fullName" type="text" name="fullName" id="fullName" />
+              <Field
+                name="fullName"
+                type="text"
+                name="fullName"
+                id="fullName"
+              />
               {errors.fullName && touched.fullName ? (
                 <div className={styles.errorMessage}>{errors.fullName}</div>
               ) : null}
@@ -63,13 +85,20 @@ const ContactForm = () => {
 
             <div className={styles.boxInput}>
               <label htmlFor="message">Message</label>
-              <Field as="textarea" name="message" type="text" name="message" id="message" />
+              <Field
+                as="textarea"
+                name="message"
+                type="text"
+                name="message"
+                id="message"
+              />
               {errors.message && touched.message ? (
                 <div className={styles.errorMessage}>{errors.message}</div>
               ) : null}
             </div>
 
             <button type="submit">Submit</button>
+            {infoMessage && <p className={styles.infoMessage}>{infoMessage}</p>}
           </Form>
         )}
       </Formik>

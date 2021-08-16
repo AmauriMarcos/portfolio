@@ -12,12 +12,22 @@
     background-color: $dark-color;
     @include centered(center, initial);
 
+    @include md{
+        @include centered(column, initial);
+        padding: 2rem 1.2rem;
+        
+    }
+
     .description{
         flex: 60%;
         display: flex;
         flex-direction: column;
         justify-items: flex-start;
         align-items: center;
+
+        @include md{
+            margin: 0 auto;
+        }
        
 
         h2{
@@ -51,5 +61,8 @@
 
     .form{
         flex: 40%;
+        @include md{
+            margin-top: 1.6rem;
+        }
     }
 }

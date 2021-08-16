@@ -1,3 +1,5 @@
+@import './breakpoints';
+
 @mixin centered($direction, $space){
     display: flex;
     justify-content: $space;

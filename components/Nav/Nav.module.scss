@@ -11,6 +11,10 @@
     transition: all .5s ease-in-out;
     z-index: 500;
 
+    @include md{
+        height: 0;
+    }
+
     & ul{
         @include centered(column, center);
         height: 100%;
@@ -35,15 +39,17 @@
 
 .menuOpen {
     transform: translate(3rem, 0);
-    /* opacity: 1; */
     width: 93.75%;
     height: 100vh;
     position: absolute;
-/*     animation-duration: 500ms;
-    animation-name: slidein; */
     background-color: $dark-color;
     transition: all .3s ease-in-out;
     z-index: 500;
+
+    @include md{
+        width: 100%;
+        transform: translate(0, 0);
+    }
 
     & ul{
         @include centered(column, center);
@@ -66,20 +72,6 @@
     }
 }
 
-
-/* @keyframes slidein {
-    from {
-        transform: translate(3rem, -50rem);
-        height: 0;
-    }
-  
-    to {
-        transform: translate(3rem, 0rem);
-        height: 100vh;
-    }
-} */
-
-
 .nav{
     @include centered(center, space-between);
     width: 93.75%;
@@ -88,6 +80,8 @@
     transform: translateY(4.5rem);
     z-index: 600;
     position: relative;
+
+
 
     .logo{
         font-weight: 900;

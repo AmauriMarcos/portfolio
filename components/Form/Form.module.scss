@@ -68,4 +68,15 @@
             background-color: rgb(96, 184, 185);
         }
     }
+
+    .infoMessage{
+        background-color: rgb(14, 228, 107);
+        color: rgb(1, 58, 24);
+        margin-top: 2rem;
+        padding: 1rem;
+        font-weight: 600;
+        width: 100%;
+        border-radius: 10px;
+      text-align: center;
+    }
 }

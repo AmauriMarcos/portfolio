@@ -3,8 +3,10 @@ import styles from "../styles/about.module.scss";
 import Image from "next/image";
 import profilePicture from "../public/assets/profilePicture.png";
 import Skills from '../components/Skills/Skills';
+import { useMediaQuery } from "react-responsive";
 
 function about() {
+  const md = useMediaQuery({ query: "(max-width: 768px)" });
   return (
     <div className={styles.About}>
       <div className={styles.boxImage}> 
@@ -14,6 +16,11 @@ function about() {
             <h4>Skills</h4>
             <Skills/>
         </div>
+{/* 
+        {md && <div className={styles.boxSkillsResponsive}>
+            <h4>Skills</h4>
+            <Skills/>
+        </div>} */}
       </div>
       
       <div className={styles.description}>
