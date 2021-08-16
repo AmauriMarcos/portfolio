@@ -6,7 +6,7 @@ function contact() {
     return (
         <div className={styles.contact}>
             <div className={styles.description}>   
-                <h2>I am here to help. <br></br>Let's talk.</h2> 
+                <h2>I am here to help. <br></br>Let&apos;s talk.</h2> 
                 <div className={styles.info}>
                     <div className={styles.emailAndPhone}>
                         <h3>Email:</h3>
