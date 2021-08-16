@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from './Hero.module.scss';
+import styles from '../styles/home.module.scss';
 import Image from 'next/image';
-import fingerPrintImg from '../../public/assets/fingerPrintImage.png';
+import fingerPrintImg from '../public/assets/fingerPrintImage.png';
 
-const Hero = () => {
+export default function Home() {
     return (
         <div className={styles.Hero}>
             <div className={styles.heroCard}>
@@ -24,4 +24,3 @@ const Hero = () => {
     )
 }
 
-export default Hero

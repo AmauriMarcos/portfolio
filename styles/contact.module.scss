@@ -1,0 +1,55 @@
+@import '../styles//mixins';
+@import '../styles/variables';
+
+.contact{
+    width: 93.75%;
+    max-width: 100%;
+    height: 40.225rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $dark-color;
+    @include centered(center, initial);
+
+    .description{
+        flex: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-items: flex-start;
+        align-items: center;
+       
+
+        h2{
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            color: $light-color;
+        }
+
+        .info{
+            width: 430px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+
+            .emailAndPhone{
+                @include centered(center, initial);
+                margin-bottom: .5rem;
+
+                h3{
+                    margin-right: .5rem;
+                    color: $primary-color;
+                }
+
+                p{
+                    color: $light-color;
+                }
+            }
+        }
+    }
+
+    .form{
+        flex: 40%;
+    }
+}

@@ -1,39 +1,40 @@
 import React, {useState} from 'react';
 import styles from './Nav.module.scss';
 import Hamburger from 'hamburger-react';
+import Link from 'next/link';
 
 function Nav() {
     const [isOpen, setOpen] = useState(false);
 
     const handleActive = () =>{
-        setOpen(!isOpen);
+        setOpen(false);
     }
 
     return (
         <>
         <div className={isOpen ? styles.menuOpen : styles.slideMenu}>
             <ul>
-                <li>
-                    <a href="#">Home</a>
+                <li onClick={handleActive}>
+                    <Link  href="/">Home</Link>
                 </li>
-                <li>
-                    <a href="#">About</a>
+                <li onClick={handleActive}>
+                    <Link href="/about">About</Link>
                 </li>
-                <li>
-                    <a href="#">Work</a>
+                <li onClick={handleActive}>
+                    <Link href="/work">Work</Link>
                 </li>
-                <li>
-                    <a href="#">Contact</a>
+                <li onClick={handleActive}>
+                    <Link href="/contact">Contact</Link>
                 </li>
             </ul>
         </div>
 
         <div className={styles.nav}>
             <div className={styles.logo}>
-                <h2>A</h2>
+                <Link href="/">A</Link>
             </div>
             <div className={styles.navElements}>
-                <a href="#">Get in touch</a>
+                <Link href="/contact">Get in touch</Link>
                 <Hamburger color="#4FD1C5"  size={48} toggled={isOpen} toggle={setOpen} />
             </div>
         </div>

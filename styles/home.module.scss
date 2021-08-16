@@ -1,5 +1,5 @@
-@import '../../styles/_mixins.scss';
-@import '../../styles/variables';
+@import '../styles/mixins';
+@import '../styles/variables';
 
 .Hero{
     width: 93.75%;
@@ -21,6 +21,7 @@
     background-color: $primary-color;
     font-family: $bold-font;
     color: $dark-light-color;
+    box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 15px;
     position: absolute;
     bottom: 0;
     left: 10%;

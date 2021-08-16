@@ -1,0 +1,63 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.Form{
+    @include centered(column, center);
+    width: 350px;
+
+    .boxInput{
+        @include centered(column, center);
+        margin-bottom: .5rem;
+        width: 100%;
+
+        input{
+            width: 100%;
+            margin-bottom: .5rem;
+            padding: .6rem .9rem;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            font-family: $main-font;
+            color: $light-color;
+            background-color: rgba(122, 229, 231, .37);
+        }
+
+        label{
+            font-size: .8rem;
+            margin-bottom: .2rem;
+            align-self: flex-start;
+            color: $primary-color;
+            font-weight: 700;
+        }
+
+        textarea{
+            width: 100%;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            height: 100px;
+            resize: none;
+            background-color: rgba(122, 229, 231, .37);
+            padding: 1rem;
+            color: $light-color;
+            font-family: $main-font;
+        }
+    }
+
+    button{
+        padding: .6rem .9rem;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        cursor: pointer;
+        background-color: $primary-color;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-top: 1rem;
+        width: 100%;
+
+        &:hover{
+            background-color: rgb(96, 184, 185);
+        }
+    }
+}

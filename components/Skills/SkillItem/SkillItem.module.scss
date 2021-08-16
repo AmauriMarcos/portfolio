@@ -1,0 +1,15 @@
+@import '../../../styles/variables';
+
+.skillItem{
+    background-color: $primary-color;
+    padding: .3rem .6rem;
+    width: 100%;
+    border-radius: 10px;
+
+    p{
+        color: $dark-color;
+        font-size: .9rem;
+        font-weight: 900;
+        text-align: center;
+    }
+}
