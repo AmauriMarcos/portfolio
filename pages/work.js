@@ -6,7 +6,7 @@ import work1 from "../public/assets/work1.png";
 import work2 from "../public/assets/work2.png";
 import work3 from "../public/assets/work3.png";
 
-const work = () => {
+const Work = () => {
   const md = useMediaQuery({ query: "(max-width: 768px)" });
 
   return (
@@ -88,4 +88,4 @@ const work = () => {
   );
 };
 
-export default work;
+export default Work;
