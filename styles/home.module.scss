@@ -20,6 +20,7 @@
 
     @include md{
         height: 40.225rem;
+        width: 100%;
     }
 }
 
@@ -37,9 +38,7 @@
     border-top-right-radius: 30px;
 
     @include md{
-        width: 370px;
-        height:375px;
-        left: 0;
+        left: 6%;
     }
 
     @include sm{

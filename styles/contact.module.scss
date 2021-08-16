@@ -38,6 +38,7 @@
 
         @include md{
             margin: 0 auto;
+            padding: 2rem;
         }
        
 
@@ -53,6 +54,8 @@
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
+
+           
 
             .emailAndPhone{
                 @include centered(center, initial);
