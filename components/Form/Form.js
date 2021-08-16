@@ -39,8 +39,6 @@ const ContactForm = () => {
             values,
             'user_JL9i8mZlbV5ymPj0oB52b'
           ).then((response) => {
-              console.log('SUCCESS!');
-              console.log(response);
               resetForm({})
               setInfoMessage("Thank you for your contact !!! I will respond your message as soon as possible.")
             })
@@ -59,7 +57,6 @@ const ContactForm = () => {
               <Field
                 name="fullName"
                 type="text"
-                name="fullName"
                 id="fullName"
               />
               {errors.fullName && touched.fullName ? (
@@ -69,7 +66,7 @@ const ContactForm = () => {
 
             <div className={styles.boxInput}>
               <label htmlFor="email">Email</label>
-              <Field name="email" type="email" name="email" id="email" />
+              <Field name="email" type="email" id="email" />
               {errors.email && touched.email ? (
                 <div className={styles.errorMessage}>{errors.email}</div>
               ) : null}
@@ -77,7 +74,7 @@ const ContactForm = () => {
 
             <div className={styles.boxInput}>
               <label htmlFor="subject">Subject</label>
-              <Field name="subject" type="text" name="subject" id="subject" />
+              <Field name="subject" type="text" id="subject" />
               {errors.subject && touched.subject ? (
                 <div className={styles.errorMessage}>{errors.subject}</div>
               ) : null}
@@ -89,7 +86,6 @@ const ContactForm = () => {
                 as="textarea"
                 name="message"
                 type="text"
-                name="message"
                 id="message"
               />
               {errors.message && touched.message ? (

@@ -21,7 +21,7 @@ function about() {
       
       <div className={styles.description}>
         <h3>
-          "Most everything that you want is just outside your comfort zone" <br></br>
+        &quot;Most everything that you want is just outside your comfort zone&quot; <br></br>
           - Jack Canfield
         </h3>
         <p>
