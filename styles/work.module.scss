@@ -27,6 +27,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: $dark-color;
+
+  @include md{
+    width: 100%;
+  }
  
   .firstRow{
       margin-top: 1rem;
@@ -41,6 +45,7 @@
       @include md{
         @include centered(column, center);
         margin-top: 3rem;  
+       
         height: 70vh;    
     }
 
