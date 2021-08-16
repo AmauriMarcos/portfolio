@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../styles/contact.module.scss';
-import Form from '../components/Form/Form';
+import ContactForm from '../components/Form/Form';
 
 function contact() {
     return (
@@ -20,7 +20,7 @@ function contact() {
             </div>  
 
             <div className={styles.form}>
-                <Form/>
+                <ContactForm/>
             </div>     
         </div>
     )

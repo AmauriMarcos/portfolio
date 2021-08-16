@@ -5,9 +5,13 @@
     @include centered(column, center);
     width: 350px;
 
+    .errorMessage{
+        color: $light-color;
+        color: rgb(231, 117, 117);
+    }
+
     .boxInput{
         @include centered(column, center);
-        margin-bottom: .5rem;
         width: 100%;
 
         input{
@@ -42,6 +46,10 @@
             color: $light-color;
             font-family: $main-font;
         }
+    }
+
+    .formkikForm{
+        width: 100%;
     }
 
     button{
