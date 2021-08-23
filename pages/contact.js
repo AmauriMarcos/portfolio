@@ -1,11 +1,26 @@
 import React from 'react';
 import styles from '../styles/contact.module.scss';
 import ContactForm from '../components/Form/Form';
+import { motion, transform } from "framer-motion";
 
 function contact() {
     return (
         <div className={styles.contact}>
-            <div className={styles.description}>   
+            <motion.div initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: {
+            x: -300,
+            opacity: 0,
+          },
+          visible: {
+            x: 0,
+            opacity: 1,
+            transition: {
+              delay: 0.4,
+            },
+          },
+        }} className={styles.description}>   
                 <h2>Let&apos;s talk.<br></br>I am here to help. </h2> 
                 <div className={styles.info}>
                     <div className={styles.emailAndPhone}>
@@ -17,11 +32,25 @@ function contact() {
                         <p>+063 394 939 420</p>
                     </div>
                 </div>    
-            </div>  
+            </motion.div>  
 
-            <div className={styles.form}>
+            <motion.div initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: {
+            y: 600,
+            opacity: 0,
+          },
+          visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+              delay: 0.4,
+            },
+          },
+        }}  className={styles.form}>
                 <ContactForm/>
-            </div>     
+            </motion.div>     
         </div>
     )
 }

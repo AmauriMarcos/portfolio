@@ -3,6 +3,8 @@ import Nav from "./Nav/Nav";
 import Home from "../pages";
 import Image from "next/image";
 import circlesDetail from "../public/assets/circlesDetail.png";
+import { motion } from 'framer-motion';
+
 /* import Work from "../pages/work"; */
 
 function Layout({ children }) {
