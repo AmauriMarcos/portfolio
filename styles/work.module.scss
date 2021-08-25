@@ -33,7 +33,7 @@
   }
  
   .firstRow{
-      margin-top: 1rem;
+      margin-top: 3rem;
   }
   .firstRow,
   .secondRow,
@@ -97,7 +97,10 @@
 
       p {
           font-family: $main-font;
-          line-height: 1.5rem;
+          line-height: 1.6rem;
+          font-size: 1.05rem;
+          margin-bottom: .5rem;
+          color: rgb(197, 197, 197);
       }
     }
   }
