@@ -39,11 +39,11 @@ const Work = () => {
           <h2>Personal Financial Dashboard</h2>
           <p>
             This is my favorite app so far. It was built with React, Node, mySQL, SCSS and 
-            Firebase authentication. I've decided to use mySQL rather than firestore just because I was confortable with my choice even if I had to generate a token in order to get the unique user identification. The UID was used as my unique ID in my User table. 
+            Firebase authentication. I&apos;ve decided to use mySQL rather than firestore just because I was confortable with my choice even if I had to generate a token in order to get the unique user identification. The UID was used as my unique ID in my User table. 
           </p>
 
           <p>
-            The app has some libraries such as react-scroll, that I've used to scroll to a specific section, you just need to wrap the component and match the name/id. It's easy and save you some time. Formik with Yup for form validation, Framer Motion to animate basic everything you want, React-Chart to display my data in a nice way. I've used Cloudinary to store images because I want the user to be able to change its profile picture. 
+            The app has some libraries such as react-scroll, that I&apos;ve used to scroll to a specific section, you just need to wrap the component and match the name/id. It&apos;s easy and save you some time. Formik with Yup for form validation, Framer Motion to animate basic everything you want, React-Chart to display my data in a nice way. I&apos;ve used Cloudinary to store images because I want the user to be able to change its profile picture. 
           </p>
         </motion.div>
       </div>
