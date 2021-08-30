@@ -30,6 +30,7 @@
 
   @include md{
     width: 100%;
+ /*    height: 30.225rem; */
   }
  
   .firstRow{
@@ -44,9 +45,8 @@
 
       @include md{
         @include centered(column, center);
-        margin-top: 3rem;  
-       
-        height: 70vh;    
+       /*  margin-top: 3rem;   */      
+        height: 100vh;    
     }
 
     .boxImage {
@@ -55,10 +55,12 @@
         box-shadow: 0 0 13px #6fbfc0;
         transition: all .2s ease-in-out;
         @include centered(center, initial);
+        
 
         @include md{
           flex: 0;   
           margin-bottom: 3rem;   
+         
       }
 
         &:hover{
