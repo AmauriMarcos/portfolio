@@ -60,9 +60,13 @@
     }
 
     .secondRow{
-      margin-top: 1rem;
+      @include md{
+       
+        margin-top: 1;
     }
+
     }
+    
 
     .boxImage {
      /*    flex: 55%; */
