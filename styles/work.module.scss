@@ -4,6 +4,12 @@
 
 .Work::-webkit-scrollbar {
   width: 16px;
+
+  
+  @include md{
+    width: 5px;
+ /*    height: 30.225rem; */
+  }
 }
 
 .Work::-webkit-scrollbar-track {
@@ -29,8 +35,10 @@
   background-color: $dark-color;
 
   @include md{
-    width: 100%;
- /*    height: 30.225rem; */
+    width: 85.75%;
+    height: 100%;
+   /*  top: 70%; */
+    height: 30.225rem;
   }
  
   .firstRow{
@@ -45,12 +53,14 @@
 
       @include md{
         @include centered(column, center);
-       /*  margin-top: 3rem;   */      
+        justify-content: flex-start;
+        margin-top: 3rem;   
         height: 100vh;    
+        /* margin-top: 0; */
     }
 
     .boxImage {
-        flex: 55%;
+     /*    flex: 55%; */
         cursor: pointer;
         box-shadow: 0 0 13px #6fbfc0;
         transition: all .2s ease-in-out;
@@ -60,6 +70,8 @@
         @include md{
           flex: 0;   
           margin-bottom: 3rem;   
+          width: 350px;
+          height: 300px;
          
       }
 
@@ -86,6 +98,7 @@
         @include md{
           flex: 0;  
           padding: 0;    
+        
       }
       h2 {
           font-family: $bold-font;
@@ -95,6 +108,11 @@
           margin-bottom: 1rem;
           color: $primary-color;
 
+          @include md{
+            font-size: 2rem;   
+          
+        }
+
       }
 
       p {
@@ -103,6 +121,10 @@
           font-size: 1.05rem;
           margin-bottom: .5rem;
           color: rgb(197, 197, 197);
+          @include md{
+            font-size: .9rem;   
+          
+        }
       }
     }
   }

@@ -48,7 +48,7 @@ const Work = () => {
         </motion.div>
       </div>
 
-      {md && (
+      {/*  {md && 
         <div className={styles.secondRow}>
           <div className={styles.boxImage}>
             <Image className={styles.img} src={work3Dash} alt="Front end Mentor" />
@@ -71,7 +71,7 @@ const Work = () => {
             }}
             className={styles.description}
           >
-           {/*  <h2>Loopstudios</h2> */}
+   
            <p>
               Within the dashboard you can set as many goals as you wish, save money from your wallet and you can have a overview about all your transactions. To create a transaction is pretty straightforward. The user can choose its own categories and colors and decide if it is an income or an expense. 
             </p>
@@ -82,7 +82,7 @@ const Work = () => {
             </p>
           </motion.div>
         </div>
-      )}
+      } */}
 
       {!md && (
         <div className={styles.secondRow}>
@@ -122,7 +122,7 @@ const Work = () => {
 
       <div className={styles.thirdRow}>
         <div className={styles.boxImage}>
-          <Image className={styles.img} src={work3} alt="Dashshow" />
+          <Image className={styles.img} src={work3Dash} alt="Dashshow" />
         </div>
 
         <motion.div
@@ -143,13 +143,16 @@ const Work = () => {
           }}
           className={styles.description}
         >
-          <h2>Dash Show</h2>
+         {/*  <h2>Dash Show</h2> */}
+          
           <p>
-            My name is Amauri Santos and I am a passionate front end developer
-            based in Serbia. I am always looking for a good challenge. I enjoy
-            making full applications with the MERN stack. I like to read, play
-            video games, running and stay with my family.
-          </p>
+              Within the dashboard you can set as many goals as you wish, save money from your wallet and you can have a overview about all your transactions. To create a transaction is pretty straightforward. The user can choose its own categories and colors and decide if it is an income or an expense. 
+            </p>
+
+            <p>
+               It was quite challenge for me because there were a lot of stuff going on.
+               To organize everything I opted to use react context. So I have created two files inside my context folder. useDash and useAuth. The first one was created to handle all the logic and state and pass it through the components. The second one was created to handle everything related to authentication. 
+            </p>
         </motion.div>
       </div>
     </div>
