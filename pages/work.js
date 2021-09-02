@@ -14,7 +14,7 @@ const Work = () => {
  
   return (
     <div className={styles.Work}>
-      <a target="_blank" href="https://dashfamily.netlify.app/">
+      <a target="_blank" href="https://dashfamily.netlify.app/" rel="Dashboard home page">
       <div className={styles.firstRow}>
         <div className={styles.boxImage}>
           <Image className={styles.img} src={work3} alt="KFE news" />
@@ -88,7 +88,7 @@ const Work = () => {
       } */}
 
       {!md && (
-        <a target="_blank" href="https://dashfamily.netlify.app/dashboard">
+        <a target="_blank" href="https://dashfamily.netlify.app/dashboard" rel="Dashboard page">
         <div className={styles.secondRow}>
           <motion.div
             initial="hidden"
