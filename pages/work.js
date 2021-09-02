@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { useMediaQuery } from "react-responsive";
 import styles from "../styles/work.module.scss";
+import Link from 'next/link';
 import Image from "next/image";
 import work1 from "../public/assets/work1.png";
 import work2 from "../public/assets/work2.png";
@@ -13,6 +14,7 @@ const Work = () => {
  
   return (
     <div className={styles.Work}>
+      <a target="_blank" href="https://dashfamily.netlify.app/">
       <div className={styles.firstRow}>
         <div className={styles.boxImage}>
           <Image className={styles.img} src={work3} alt="KFE news" />
@@ -47,6 +49,7 @@ const Work = () => {
           </p>
         </motion.div>
       </div>
+      </a>
 
       {/*  {md && 
         <div className={styles.secondRow}>
@@ -85,6 +88,7 @@ const Work = () => {
       } */}
 
       {!md && (
+        <a target="_blank" href="https://dashfamily.netlify.app/dashboard">
         <div className={styles.secondRow}>
           <motion.div
             initial="hidden"
@@ -118,9 +122,10 @@ const Work = () => {
             <Image className={styles.img} src={work3Dash} alt="Front end Mentor" />
           </div>
         </div>
+        </a>
       )}
 
-      <div className={styles.thirdRow}>
+      {/* <div className={styles.thirdRow}>
         <div className={styles.boxImage}>
           <Image className={styles.img} src={work3Dash} alt="Dashshow" />
         </div>
@@ -143,7 +148,7 @@ const Work = () => {
           }}
           className={styles.description}
         >
-         {/*  <h2>Dash Show</h2> */}
+     
           
           <p>
               Within the dashboard you can set as many goals as you wish, save money from your wallet and you can have a overview about all your transactions. To create a transaction is pretty straightforward. The user can choose its own categories and colors and decide if it is an income or an expense. 
@@ -154,7 +159,7 @@ const Work = () => {
                To organize everything I opted to use react context. So I have created two files inside my context folder. useDash and useAuth. The first one was created to handle all the logic and state and pass it through the components. The second one was created to handle everything related to authentication. 
             </p>
         </motion.div>
-      </div>
+      </div> */}
     </div>
   );
 };
