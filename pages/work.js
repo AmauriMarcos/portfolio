@@ -89,7 +89,7 @@ const Work = () => {
 
       {!md && (
         <a target="_blank" href="https://dashfamily.netlify.app/dashboard" rel="noreferrer">
-        <div className={styles.secondRow}>
+        <div  className={styles.secondRow}>
           <motion.div
             initial="hidden"
             animate="visible"

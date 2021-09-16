@@ -34,7 +34,9 @@ function Nav() {
                 <Link href="/">A</Link>
             </div>
             <div className={styles.navElements}>
-                <Link href="/contact">Get in touch</Link>
+                <div onClick={handleActive}>
+                    <Link href="/contact" >Get in touch</Link>
+                </div>               
                 <Hamburger color="#4FD1C5"  size={48} toggled={isOpen} toggle={setOpen} />
             </div>
         </div>

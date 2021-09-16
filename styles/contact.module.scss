@@ -43,9 +43,11 @@
        
 
         h2{
-            font-size: 3rem;
+            font-size: 3.3rem;
             margin-bottom: 3rem;
             color: $light-color;
+            font-family: $bold-font;
+            letter-spacing: .2rem;
         }
 
         .info{
