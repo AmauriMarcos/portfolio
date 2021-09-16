@@ -3,6 +3,7 @@ import styles from "../styles/home.module.scss";
 import Image from "next/image";
 import fingerPrintImg from "../public/assets/fingerPrintImage.png";
 import { motion, transform } from "framer-motion";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -31,7 +32,9 @@ export default function Home() {
             <h1>Work</h1>
           </div>
           <div className={styles.description}>
-            <Image src={fingerPrintImg} alt="Finger print" />
+            <Link href="/work" >
+              <Image src={fingerPrintImg} alt="Finger print" className={styles.fingerPrint}/>
+            </Link>
             <div className={styles.textColumn}>
               <p>Web Developer</p>
               <p>Based in Serbia</p>

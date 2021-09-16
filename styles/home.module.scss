@@ -69,6 +69,10 @@
     .description{
         @include centered(center, initial);
 
+        .fingerPrint{
+            cursor: pointer !important;
+        }
+
         .textColumn{
 
             p::after{
