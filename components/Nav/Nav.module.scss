@@ -24,10 +24,15 @@
         z-index: 500;
         font-family: $bold-font;
 
+        & li{
+            cursor: pointer;
+        }
+
         a{
             color: $light-color;
             text-transform: uppercase;
             letter-spacing: .1rem;
+            
 
             &:hover{
                 color: $primary-color;

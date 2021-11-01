@@ -33,18 +33,40 @@
   background-color: $dark-color;
 /*   background-color: white; */
 
+.credentials{
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  & p{
+    margin-right: 10px;
+
+    span{
+      font-weight: bold
+    }
+  }
+}
+
   & .wrapper {
     @include centered(initial, space-around);
-    height: 80vh;
-    border: 1px solid gray;
+    height: 78vh;
+    /* border: 1px solid gray; */
+    padding: 0 5%;
+
+    &:first-child{
+      margin-top: 3rem;
+    }
 
     .boxImage{
       cursor: pointer;
       box-shadow: 0 0 13px #6fbfc0;
       transition: all 0.2s ease-in-out;
       @include centered(center, initial);
-      width: 650px;
-      height: 430px; 
+      width: 700px;
+      height: 350px; 
+
+      &:hover {
+        box-shadow: 0 0 19px $primary-color;
+      }
 
         & .img {
           filter: grayscale(100%);
@@ -63,10 +85,22 @@
   }
 
   & .info {
+
+
     .description {
       flex: 40%;
       color: $light-color;
       padding: 0 3rem;
+
+      & .wrapperCredentials{
+        display: flex;
+        margin-top: 1rem;
+
+        & .item{
+          margin: 0 .5rem;
+        }
+
+      }
 
       @include md {
         flex: 0;
@@ -89,7 +123,6 @@
         font-family: $main-font;
         line-height: 1.6rem;
         font-size: 1.05rem;
-        margin-bottom: 0.5rem;
         color: rgb(197, 197, 197);
         @include md {
           font-size: 0.9rem;
@@ -118,9 +151,7 @@
     height: 100%;
   }
 
-  &:hover {
-    box-shadow: 0 0 19px $primary-color;
-  }
+  
 
  
 }

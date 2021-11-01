@@ -60,10 +60,8 @@ function about() {
           zone&quot; <br></br>- Jack Canfield
         </h3>
         <p>
-          My name is Amauri Santos and I am a passionate front end developer
-          based in Serbia. I am always looking for a good challenge. I enjoy
-          making full applications with the MERN stack. I like to read, play
-          video games, running and stay with my family.
+          Hello, my name is Amauri Santos and I am a passionate front end developer from Brazil
+          but I am currently living in Serbia with my family. I am always looking for a good challenge. I&quot;ve built some sites and applications to get experience 
         </p>
       </motion.div>
     </div>

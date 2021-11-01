@@ -5,11 +5,17 @@
     padding: .3rem .6rem;
     width: 100%;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     p{
-        color: $dark-color;
+        color: $dark-color !important;
         font-size: .9rem;
         font-weight: 900;
         text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
