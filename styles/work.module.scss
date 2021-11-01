@@ -1,14 +1,12 @@
-@import '../styles/mixins';
-@import '../styles/variables';
-
+@import "../styles/mixins";
+@import "../styles/variables";
 
 .Work::-webkit-scrollbar {
   width: 10px;
 
-  
-  @include md{
+  @include md {
     width: 2px;
- /*    height: 30.225rem; */
+    /*    height: 30.225rem; */
   }
 }
 
@@ -25,116 +23,104 @@
 .Work {
   width: 93.75%;
   max-width: 100%;
-  height: 40.225rem;
-  overflow-x:hidden; 
-  overflow-y:auto;
+  height: 90vh;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: $dark-color;
+/*   background-color: white; */
 
-  @include md{
-    width: 100%;
-   /*  top: 70%; */
-    height: 30.225rem;
-    padding: 1rem 1.2rem;
-  }
- 
-  .firstRow{
-      margin-top: 3rem;
-  }
-  .firstRow,
-  .secondRow,
-  .thirdRow {
-      padding: 0 3%;
-      height: 85vh;
+  & .wrapper {
+    @include centered(initial, space-around);
+    height: 80vh;
+    border: 1px solid gray;
+
+    .boxImage{
+      cursor: pointer;
+      box-shadow: 0 0 13px #6fbfc0;
+      transition: all 0.2s ease-in-out;
       @include centered(center, initial);
+      width: 650px;
+      height: 430px; 
 
-      @include md{
-        @include centered(column, center);
-        justify-content: flex-start;
-        margin-top: 3rem;   
-        height: 100vh;    
-        /* margin-top: 0; */
-    }
-
-    .secondRow{
-      @include md{
-       
-        margin-top: 1;
-    }
-
-    }
-    
-
-    .boxImage {
-     /*    flex: 55%; */
-        cursor: pointer;
-        box-shadow: 0 0 13px #6fbfc0;
-        transition: all .2s ease-in-out;
-        @include centered(center, initial);
-        
-
-        @include md{
-          flex: 0;   
-          margin: 2rem 0;   
-          width: 330px;
-          height: 290px;
-         
-      }
-
-        &:hover{
-            box-shadow: 0 0 19px $primary-color;
-        }
-
-      & .img {
-        filter: grayscale(100%);
-        margin: 0 auto;
-        transition: all .3s ease-in-out;
-
-        &:hover{
+        & .img {
+          filter: grayscale(100%);
+          margin: 0 auto;
+          transition: all 0.3s ease-in-out;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      
+          &:hover {
             filter: grayscale(0);
+          }
         }
-      }
+      
     }
+  }
 
+  & .info {
     .description {
-        flex: 40%;
-        color: $light-color;
-        padding: 0 3rem;
+      flex: 40%;
+      color: $light-color;
+      padding: 0 3rem;
 
-        @include md{
-          flex: 0;  
-          padding: 0;    
-        
+      @include md {
+        flex: 0;
+        padding: 0;
       }
       h2 {
-          font-family: $bold-font;
-          letter-spacing: .2rem;
-          font-size: 2.2rem;
-          text-align: center;
-          margin-bottom: 1rem;
-          color: $primary-color;
+        font-family: $bold-font;
+        letter-spacing: 0.2rem;
+        font-size: 2.2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+        color: $primary-color;
 
-          @include md{
-            font-size: 1.8rem;   
-          
+        @include md {
+          font-size: 1.8rem;
         }
-
       }
 
       p {
-          font-family: $main-font;
-          line-height: 1.6rem;
-          font-size: 1.05rem;
-          margin-bottom: .5rem;
-          color: rgb(197, 197, 197);
-          @include md{
-            font-size: .9rem;   
-          
+        font-family: $main-font;
+        line-height: 1.6rem;
+        font-size: 1.05rem;
+        margin-bottom: 0.5rem;
+        color: rgb(197, 197, 197);
+        @include md {
+          font-size: 0.9rem;
         }
       }
     }
   }
+
+  @include md {
+    width: 100%;
+    /*  top: 70%; */
+    height: 30.225rem;
+    padding: 1rem 1.2rem;
+  }
+
+  .firstRow {
+    margin-top: 3rem;
+  }
+
+
+  @include md {
+    flex: 0;
+    margin: 2rem 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover {
+    box-shadow: 0 0 19px $primary-color;
+  }
+
+ 
 }
